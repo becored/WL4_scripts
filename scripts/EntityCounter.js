@@ -12,7 +12,7 @@ function EntityCounter()
 
     interface.log("Difficulty: " + difficultyNames[entitylist_id]);
     interface.log("Entity Local ID (int): " + entity_id);
-    for (current_room_id = 0; current_room_id < 16; current_room_id ++) {
+    for (current_room_id = 0; current_room_id < interface.GetRoomNum(); current_room_id ++) {
         interface.SetCurrentRoomId(current_room_id);
         var entities_str = interface.GetEntityListData(entitylist_id);
         var entitess_hex = entities_str.split(" ");
