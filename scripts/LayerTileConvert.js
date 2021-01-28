@@ -1,4 +1,4 @@
-function layerTileConbert()
+function layerTileConvert()
 {
     var target_layerid = interface.prompt("Input Layer Id", "0");
     var target_tileid = interface.prompt("Input Tile16 Id (Before)", "0");
@@ -21,4 +21,4 @@ function layerTileConbert()
     interface.log("Finish Conversion!");
 }
 
-layerTileConbert();
+layerTileConvert();
