@@ -1,4 +1,4 @@
-function ImportEntityListData()
+function ExportEntityListData()
 {
     var output_dir = "./entities/";
     var difNames = ["Hard", "Normal", "S-Hard"];
@@ -8,4 +8,4 @@ function ImportEntityListData()
     interface.log("File exported:" + output_dir + "Room" + ("00" + interface.GetCurRoomId()).slice(-2) + "_" + difNames[write_id] + ".bin");
 }
 
-ImportEntityListData();
+ExportEntityListData();
