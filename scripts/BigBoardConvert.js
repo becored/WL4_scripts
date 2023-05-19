@@ -1,7 +1,7 @@
 function bigBoardConvert()
 {
-    var width = interface.GetCurRoomLayerWidth(0);
-    var height = interface.GetCurRoomLayerHeight(0);
+    var width = WL4EditorInterface.GetCurRoomLayerWidth(0);
+    var height = WL4EditorInterface.GetCurRoomLayerHeight(0);
     var result = "";
     var conv_map = {
         280:0,
@@ -16,7 +16,7 @@ function bigBoardConvert()
 
     for (y = 0; y < parseInt(height); y++) {
         for (x = 0; x < parseInt(width); x++) {
-            var cur_tile = interface.GetCurRoomTile16(0, x, y);
+            var cur_tile = WL4EditorInterface.GetCurRoomTile16(0, x, y);
             for (var key in conv_map) {
                 if (cur_tile == key) {
                     result = result + ("00" + conv_map[key]).slice(-2) + " ";
@@ -24,7 +24,7 @@ function bigBoardConvert()
             }
         }
     }
-    interface.log(result);
+    WL4EditorInterface.log(result);
 }
 
 bigBoardConvert();
