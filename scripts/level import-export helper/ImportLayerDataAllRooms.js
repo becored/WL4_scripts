@@ -7,8 +7,8 @@ function ImportLayerDataAllRooms() {
     str = WL4EditorInterface.ReadTxtFile(output_dir + "Rooms_info.txt");
     rooms_info = str.split(',');
 
-    if (WL4EditorInterface.GetRoomNum() != rooms_info[0]) {
-        WL4EditorInterface.log("Number of rooms does not match!");
+    if (WL4EditorInterface.GetRoomNum() < rooms_info[0]) {
+        WL4EditorInterface.alert("Not enough rooms!");
         return;
     }
 
